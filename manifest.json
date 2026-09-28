@@ -2,9 +2,24 @@
   "version": "1.0.1",
   "files": [
     {
-      "path": "patch_test.txt",
-      "url": "https://raw.githubusercontent.com/dhc9w6625s-max/Yasar-Patcher/main/patch/patch_test.txt",
-      "sha256": "360000c3cfef0328b2bee3b978b3551d9b2d775c80d2b4657b47fbab407294e3"
+      "path": "pack/root.eix",
+      "url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/v1.0.1/root.eix",
+      "sha256": "d863d45ef7b13a8561d257c9d4cf63f80f91981793e6e7c10116c5dc7e4eaddb"
+    },
+    {
+      "path": "pack/root.epk",
+      "url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/v1.0.1/root.epk",
+      "sha256": "2fec2397722dd0e33a8dada2c29c5f6a67641d7ed6422237fc7eb3c07b59e379"
+    },
+    {
+      "path": "pack/yw_etc.eix",
+      "url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/v1.0.1/yw_etc.eix",
+      "sha256": "21f8afb62a16c4840cf5c19a65485b13704ff1f060724b21d725a661c0a81118"
+    },
+    {
+      "path": "pack/yw_etc.epk",
+      "url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/v1.0.1/yw_etc.epk",
+      "sha256": "57dad1be35c683f1eedb398f75c61a17029b4854cdffb556d5663c5bcfc26fff"
     }
   ]
 }
