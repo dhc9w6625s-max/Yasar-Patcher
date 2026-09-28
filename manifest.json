@@ -1,4 +1,10 @@
 {
-  "version": "1.0.0",
-  "files": []
+  "version": "1.0.1",
+  "files": [
+    {
+      "path": "patch_test.txt",
+      "url": "https://raw.githubusercontent.com/dhc9w6625s-max/Yasar-Patcher/main/patch/patch_test.txt",
+      "sha256": "360000c3cfef0328b2bee3b978b3551d9b2d775c80d2b4657b47fbab407294e3"
+    }
+  ]
 }
