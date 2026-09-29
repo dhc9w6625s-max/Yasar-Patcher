@@ -1,10 +1,17 @@
 {
-  "Version": "1.0.2-test",
+  "Version": "1.0.3",
+  "BaseVersion": "1.0.2",
   "Files": [
     {
-      "Path": "patch_test.txt",
-      "Sha256": "360000c3cfef0328b2bee3b978b3551d9b2d775c80d2b4657b47fbab407294e3",
-      "Size": 20
+      "Path": "pack/root.eix",
+      "Sha256": "01ddc521f84fdd3b8155f632b1219c6486df31ee494b6c6b276a2cff661b62e0",
+      "Size": 3876
+    },
+    {
+      "Path": "pack/root.epk",
+      "Sha256": "ca0bf1e6b8916babb8b4ca86e5006a79212b30c3612fe7efdb09bf75c9463990",
+      "Size": 775936
     }
-  ]
+  ],
+  "Deleted": []
 }
