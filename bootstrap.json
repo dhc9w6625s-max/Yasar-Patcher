@@ -1,0 +1,25 @@
+{
+  "Version": "1.0.2",
+  "FullZipSha256": "9dd967899c4537b42b430fe68eb5e3bf39b4febb45b145d5da825ac5d79490c6",
+  "FullZipSize": 4615965833,
+  "Parts": [
+    {
+      "File": "YasarClient_v1.0.2.part01",
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/v1.0.2/YasarClient_v1.0.2.part01",
+      "Sha256": "7f8f3a9ef7147c4167da4d0d750ef49d31f7bb87c7bedcc0f71d2aa57a8db2c1",
+      "Size": 1887436800
+    },
+    {
+      "File": "YasarClient_v1.0.2.part02",
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/v1.0.2/YasarClient_v1.0.2.part02",
+      "Sha256": "8f71a44330fe6f4139e4ea528250407e643f227babee7675607813a9712b1a61",
+      "Size": 1887436800
+    },
+    {
+      "File": "YasarClient_v1.0.2.part03",
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/v1.0.2/YasarClient_v1.0.2.part03",
+      "Sha256": "68a5b299016eacf33767080cf7d5dce52237bb160f55c457876ca376a3c469e1",
+      "Size": 841092233
+    }
+  ]
+}
