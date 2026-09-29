@@ -1,5 +1,5 @@
 {
-  "Version": "1.0.6",
+  "Version": "1.0.7",
   "BaseVersion": "1.0.2",
   "Files": [
     {
@@ -11,6 +11,11 @@
       "Path": "pack/root.epk",
       "Sha256": "ca0bf1e6b8916babb8b4ca86e5006a79212b30c3612fe7efdb09bf75c9463990",
       "Size": 775936
+    },
+    {
+      "Path": "patch_publish_test.txt",
+      "Sha256": "c9fc973c652206fe669d5e9cc5bfff921d8200050b379d0e431467f03a06bd19",
+      "Size": 17
     }
   ],
   "Deleted": []
