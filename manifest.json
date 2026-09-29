@@ -1,5 +1,5 @@
 {
-  "Version": "1.0.3-delete-test",
+  "Version": "1.0.3",
   "BaseVersion": "1.0.2",
   "Files": [
     {
@@ -13,7 +13,5 @@
       "Size": 775936
     }
   ],
-  "Deleted": [
-    "delete_test.txt"
-  ]
+  "Deleted": []
 }
