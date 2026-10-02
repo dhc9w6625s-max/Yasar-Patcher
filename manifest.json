@@ -1,27 +1,55 @@
-{
+﻿{
   "Version": "1.0.10",
   "BaseVersion": "1.0.2",
-  "PatchNotes": "Patchnotes \u2013 02.10.2026\r\n\r\nMetin-Spin\r\n- Metin-Spin wurde weiter verbessert und stabilisiert.\r\n- Metin-Kills f\u00FCr den Spin werden jetzt zuverl\u00E4ssig gespeichert.\r\n- Spin-Belohnungen werden serverseitig festgelegt.\r\n- Bereits gestartete Spins k\u00F6nnen nicht mehr umgangen oder doppelt abgeholt werden.\r\n- Belohnungen werden erst nach Abschluss der Roulette-Animation vergeben.\r\n- Das Infofenster zeigt die m\u00F6glichen Belohnungen passend zum jeweiligen Levelbereich.\r\n- Die Metin-Spin-Anzeige und Fortschrittsleiste wurden weiter \u00FCberarbeitet.\r\n- Die Wasseranimation innerhalb der Fortschrittsleiste wurde integriert und angepasst.\r\n- Mehrere Levelbereiche f\u00FCr unterschiedliche Belohnungspools wurden vorbereitet.\r\n- Aktuell sind in den Bereichen noch Testbelohnungen hinterlegt. Die finalen Belohnungen folgen sp\u00E4ter.\r\n\r\nNeues Gaya-System\r\n- Zwei neue getrennte W\u00E4hrungen wurden eingef\u00FChrt:\r\n  - Metin-Gaya\r\n  - Boss-Gaya\r\n- Beide W\u00E4hrungen werden unabh\u00E4ngig voneinander gespeichert.\r\n- Metin-Gaya und Boss-Gaya bleiben nach Logout und Serverneustart erhalten.\r\n- Die W\u00E4hrungen k\u00F6nnen live gutgeschrieben und abgezogen werden.\r\n- Negative Gaya-Werte sind nicht m\u00F6glich.\r\n- Das System wurde erfolgreich mit mehreren Charakteren getestet.\r\n\r\nDemn\u00E4chst\r\n- Anzeige von Metin-Gaya und Boss-Gaya direkt im Interface.\r\n- Eigene Shops f\u00FCr Metin-Gaya und Boss-Gaya.\r\n- Handelbare Gaya-B\u00FCndel.\r\n- Gaya-Drops bei Metins und Bossen.\r\n- Finale Belohnungen f\u00FCr die Metin-Spin-Levelbereiche.",
+  "PatchNotes": "Version 1.0.11 \u2013 03.10.2026\r\n\r\n[Gaya-System]\r\n- Boss-Gaya und Metin-Gaya Anzeige im Inventar weiter \u00FCberarbeitet.\r\n- Eigenst\u00E4ndiges Gaya-Fenster neben dem Inventar optimiert.\r\n- Hintergrund der Gaya-Anzeige verbreitert.\r\n- Gaya-Rahmen verbreitert, damit gr\u00F6\u00DFere Werte sauber dargestellt werden.\r\n- Zahlen wachsen nun nach links, damit hohe Gaya-Werte nicht aus dem Rahmen ragen.\r\n- Abstand zwischen Boss-Gaya und Metin-Gaya angepasst.\r\n- Position von Metin-Gaya nochmals feinjustiert.\r\n- Boss-Gaya- und Metin-Gaya-Icons an die neue Ausrichtung angepasst.\r\n- Gaya-Fenster bleibt unabh\u00E4ngig von der Bewegung des Inventars.\r\n- Tooltips f\u00FCr Boss-Gaya und Metin-Gaya bleiben erhalten.\r\n- Allgemeine UI-Feinarbeiten an der Gaya-Anzeige durchgef\u00FChrt.\r\n\r\n[Patch-System]\r\n- Unterst\u00FCtzung f\u00FCr gro\u00DFe Patch-Dateien vorbereitet.\r\n- Gro\u00DFe Dateien k\u00F6nnen jetzt \u00FCber GitHub Release-Storage verarbeitet werden.\r\n- Download-URL-Unterst\u00FCtzung f\u00FCr Patch-Dateien erg\u00E4nzt.\r\n- Manifest-Verarbeitung f\u00FCr gro\u00DFe Dateien erweitert.\r\n- PatchMaker f\u00FCr gro\u00DFe Client-Dateien wie locale.epk erweitert.\r\n\r\n[Tests / Intern]\r\n- Boss-Gaya- und Metin-Gaya-Werte f\u00FCr weitere Tests gepr\u00FCft.\r\n- Datenbankwerte des Gaya-Systems kontrolliert.\r\n- PatchMaker erfolgreich neu gebaut und getestet.",
   "Files": [
     {
       "Path": "metin2.cfg",
-      "Sha256": "9254f5d7b7b552e45de4abeb722851fc8402284a6f8d898a314ee29830335b58",
-      "Size": 407
+      "Sha256": "fd8e5b528fab35707252c2c1c3a5c79f6390d3108d13274edef124cb0f79ff14",
+      "Size": 408,
+      "Url": ""
     },
     {
       "Path": "metin2client.exe",
-      "Sha256": "ad7e1e8391390375c38448eecf7ce3a9a4f7dc3ac432eb527a1d7f3e337870af",
-      "Size": 5391872
+      "Sha256": "df637f50f9b56000fcc3f411c6d37c89e06f114cf6f062c6da5fb598cb61366e",
+      "Size": 5391872,
+      "Url": ""
+    },
+    {
+      "Path": "pack/locale.eix",
+      "Sha256": "2f044481fd943e940856cec385c016661a7fbe4594f0031d33ec952b1525714f",
+      "Size": 239252,
+      "Url": ""
+    },
+    {
+      "Path": "pack/locale.epk",
+      "Sha256": "63c185ea99ec1ca85e67c7a8d40ecb8e923eac11cb443f71eac1b4366bf42fa9",
+      "Size": 156901120,
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.10/pack__locale.epk"
     },
     {
       "Path": "pack/root.eix",
-      "Sha256": "e11c43a104fdffc663cdca815f561e2b4e18fb56cc62c7c49b38e1189466f838",
-      "Size": 4884
+      "Sha256": "74e1d0200ececcfe26342cc2a7ea2deb89ac2bfa9cbf513151d33ae88b87986b",
+      "Size": 5116,
+      "Url": ""
     },
     {
       "Path": "pack/root.epk",
-      "Sha256": "265eb5297c4f9df9a1209e7e9c2a69db06601d14252fba5f6c9fab95f9a8f4cd",
-      "Size": 878848
+      "Sha256": "3f8057be3bd0ab9f88f7c40c21e1910d54c8a22eaf01d949d72ba591031d79b6",
+      "Size": 988672,
+      "Url": ""
+    },
+    {
+      "Path": "pack/yw_etc.eix",
+      "Sha256": "9674eb4a51a3422fea0befe22b2763bd667c07feb5eec516e9bb0cfc1d46ff7e",
+      "Size": 283372,
+      "Url": ""
+    },
+    {
+      "Path": "pack/yw_etc.epk",
+      "Sha256": "310be5834ed42517d78022a9c496cdf5b22881e8b453480b39fee2ce28be427b",
+      "Size": 124067584,
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.10/pack__yw_etc.epk"
     }
   ],
   "Deleted": [
