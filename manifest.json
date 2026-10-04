@@ -1,7 +1,7 @@
 ﻿{
-  "Version": "1.0.10",
+  "Version": "1.0.11",
   "BaseVersion": "1.0.2",
-  "PatchNotes": "Patch 1.0.11 \u2013 Live Loot \u0026 Gaya Update\r\n\r\n- Neues Live-Loot-Fenster eingebaut\r\n- Aufgehobene Items werden direkt mit Item-Icon, Name und Menge angezeigt\r\n- Bis zu 8 letzte Loot-Eintr\u00E4ge werden gleichzeitig dargestellt\r\n- Item-Tooltip per Mouseover vorbereitet\r\n\r\n- Normale Boden-Items werden im persistenten Loot-Log gespeichert\r\n- Party-Loot ber\u00FCcksichtigt den tats\u00E4chlichen Empf\u00E4nger\r\n\r\n- Metin-Gaya in das Live-Loot-System integriert\r\n- Metin-Gaya: 30% Chance, \u002B1 pro g\u00FCltigem Metin\r\n- Metin-Gaya nur bei Metins innerhalb von \u00B115 Level\r\n- Metin-Gaya Cap: 10.000\r\n\r\n- Boss-Gaya in das Live-Loot-System integriert\r\n- Boss-Gaya: aktuell 30% Chance, \u002B15 pro g\u00FCltigem Boss\r\n- Metinsteine sind beim Boss-Gaya-System ausgeschlossen\r\n- Boss-Gaya Cap: 10.000\r\n- Restmenge bis zum Cap wird korrekt ber\u00FCcksichtigt\r\n\r\n- Neues Live-Loot Server/Client-Paket integriert\r\n- Client-C\u002B\u002B und Python-Bridge erweitert\r\n- Neuer Root-Pack erstellt\r\n- Neuer Client-Build erstellt\r\n- Live-Loot-Fenster ingame erfolgreich getestet\r\n\r\n- PatchMaker verbessert\r\n- Upload-Timeout von 100 Sekunden auf 10 Minuten erh\u00F6ht\r\n- PatchMaker merkt sich die zuletzt ver\u00F6ffentlichte Patch-Version\r\n- Fehler mit zehntausenden falsch erkannten gel\u00F6schten Dateien behoben\r\n- Testclient von alten Backup- und Logdateien bereinigt\r\n\r\nNoch zu testen / offen:\r\n- Item-Tooltip per Mouseover vollst\u00E4ndig testen\r\n- Pr\u00FCfen, dass normale Pickup-Meldungen nicht mehr im Chat erscheinen\r\n- Metin-Gaya Live-Anzeige ingame testen\r\n- Boss-Gaya Live-Anzeige ingame testen\r\n- Boss-Gaya Cap-Test von 9.995 auf 10.000\r\n- Boss-Gaya DB-Eintrag pr\u00FCfen\r\n- Locale-Fallbacks f\u00FCr Metin-Gaya und Boss-Gaya bereinigen",
+  "PatchNotes": "Patchnotes 1.0.11\r\n\r\nGaya-System\r\n- Metin-Gaya-Beutel und Boss-Gaya-Beutel vollst\u00E4ndig eingebunden.\r\n- Neue Item-Icons f\u00FCr beide Gaya-Beutel hinzugef\u00FCgt.\r\n- Metin-Gaya-Beutel jetzt blau/t\u00FCrkis.\r\n- Boss-Gaya-Beutel jetzt rot/orange.\r\n- Schwarze Hintergr\u00FCnde der Icons entfernt.\r\n- Rechtsklick auf einen Gaya-Beutel verbraucht jetzt immer genau 1 Beutel.\r\n- Pro Beutel wird \u002B1 entsprechende Gaya gutgeschrieben.\r\n- Bei erreichtem Gaya-Limit von 10.000 wird kein Beutel verbraucht.\r\n- Server-Proto der Gaya-Beutel korrigiert.\r\n\r\nDrop-Anzeige\r\n- Bodenitems \u00FCbertragen jetzt zus\u00E4tzlich ihre tats\u00E4chliche Stack-Anzahl.\r\n- Gestapelte Items zeigen ihre Menge direkt auf dem Boden an.\r\n- Beispiel: Boss-Gaya-Beutel x15.\r\n- Die Mengenanzeige funktioniert f\u00FCr alle gestapelten Bodenitems.\r\n- Bei genau 1 St\u00FCck wird weiterhin nur der normale Itemname angezeigt.\r\n\r\nClient / Server\r\n- TPacketGCItemGroundAdd um die Item-Anzahl erweitert.\r\n- Server sendet nun GetCount() bei Bodenitems.\r\n- Client verarbeitet die Menge beim Erstellen des Bodenitems.\r\n- Server erfolgreich neu kompiliert.\r\n- Client erfolgreich neu kompiliert.\r\n- Neue Server-Binary deployed und per SHA-256 \u00FCberpr\u00FCft.\r\n\r\nLive Loot Log\r\n- Fehler beim Beenden des Spiels behoben.\r\n- Fehler beim Teleportieren/Schlie\u00DFen im Live-Loot-Log behoben.\r\n- Ung\u00FCltigen ClearDictionary()-Aufruf aus LiveLootLogWindow entfernt.\r\n- Ung\u00FCltigen ClearDictionary()-Aufruf aus LiveLootRow entfernt.\r\n- AttributeError beim Schlie\u00DFen des Clients behoben.\r\n\r\nUI / Feinschliff\r\n- Gaya-Beutel optisch an die jeweiligen Gaya-W\u00E4hrungen angepasst.\r\n- Neue Icon-Packs eingebunden.\r\n- Root-Pack aktualisiert.\r\n- Allgemeine kleinere UI- und Client-Anpassungen durchgef\u00FChrt.",
   "Files": [
     {
       "Path": "metin2.cfg",
@@ -11,32 +11,44 @@
     },
     {
       "Path": "metin2client.exe",
-      "Sha256": "70f7af765975200b7946a6552f5bc366a5793f729d803970e987b367a50f5e49",
-      "Size": 5393408,
+      "Sha256": "fc5f1d999f28b34bdc1c7db491213d227f1d7690c612e31f248310be908cf120",
+      "Size": 5393920,
+      "Url": ""
+    },
+    {
+      "Path": "pack/icon.eix",
+      "Sha256": "310bb2df93ffb0e000f20f95c1f770b9c239582205480bf24d0e98bfcd4b9a6b",
+      "Size": 139988,
+      "Url": ""
+    },
+    {
+      "Path": "pack/icon.epk",
+      "Sha256": "df40f7b1bf347c47d5b26b21545c25cccfe817c8b0a818a53ecb01244fd21d54",
+      "Size": 17053440,
       "Url": ""
     },
     {
       "Path": "pack/locale.eix",
-      "Sha256": "8531ebd11389b28679ce24230e9230bbd5f1c992e6c41aa604f34a27ba62a93f",
-      "Size": 236964,
+      "Sha256": "719e58a47aa38c86817ad07436202e314d9f396c584a1219450fc58074c752e5",
+      "Size": 252164,
       "Url": ""
     },
     {
       "Path": "pack/locale.epk",
-      "Sha256": "c333f639c17b9574574df9a2d30221898f9ab565e88b68644daea22ae77271ae",
-      "Size": 156901888,
-      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.10/pack__locale.epk"
+      "Sha256": "bb07b18ba0656e0794a1ca2ba83ed2110b40be261538b5cb8e63f01b38b333ac",
+      "Size": 157358848,
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.11/pack__locale.epk"
     },
     {
       "Path": "pack/root.eix",
-      "Sha256": "6e3645f96849b8a35c775e9d8f87741c4383133ecff72dcdbb230abcee44a08f",
-      "Size": 5484,
+      "Sha256": "d2935934197bfcd2c5d71fb24b7ec4681fa78b6efb0bcb7a55be654a39690773",
+      "Size": 5540,
       "Url": ""
     },
     {
       "Path": "pack/root.epk",
-      "Sha256": "0911cc4f6eb3e17bf1c42eaf7ccc7cd5179203eb72e62cdfe98debea766a0347",
-      "Size": 1105920,
+      "Sha256": "67ba277a6ad3015739c24d703adc781be66f84f73d672098eeff74807f252db8",
+      "Size": 1111296,
       "Url": ""
     },
     {
@@ -49,7 +61,7 @@
       "Path": "pack/yw_etc.epk",
       "Sha256": "70b68cd619b981a3cb4abd223f95aea108ebdbed988c7b8146bed7e83e9b37a7",
       "Size": 124076800,
-      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.10/pack__yw_etc.epk"
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.11/pack__yw_etc.epk"
     }
   ],
   "Deleted": []
