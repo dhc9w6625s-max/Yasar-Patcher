@@ -1,7 +1,7 @@
 ﻿{
-  "Version": "1.0.11",
+  "Version": "1.0.12",
   "BaseVersion": "1.0.2",
-  "PatchNotes": "Patchnotes 1.0.11\r\n\r\nGaya-System\r\n- Metin-Gaya-Beutel und Boss-Gaya-Beutel vollst\u00E4ndig eingebunden.\r\n- Neue Item-Icons f\u00FCr beide Gaya-Beutel hinzugef\u00FCgt.\r\n- Metin-Gaya-Beutel jetzt blau/t\u00FCrkis.\r\n- Boss-Gaya-Beutel jetzt rot/orange.\r\n- Schwarze Hintergr\u00FCnde der Icons entfernt.\r\n- Rechtsklick auf einen Gaya-Beutel verbraucht jetzt immer genau 1 Beutel.\r\n- Pro Beutel wird \u002B1 entsprechende Gaya gutgeschrieben.\r\n- Bei erreichtem Gaya-Limit von 10.000 wird kein Beutel verbraucht.\r\n- Server-Proto der Gaya-Beutel korrigiert.\r\n\r\nDrop-Anzeige\r\n- Bodenitems \u00FCbertragen jetzt zus\u00E4tzlich ihre tats\u00E4chliche Stack-Anzahl.\r\n- Gestapelte Items zeigen ihre Menge direkt auf dem Boden an.\r\n- Beispiel: Boss-Gaya-Beutel x15.\r\n- Die Mengenanzeige funktioniert f\u00FCr alle gestapelten Bodenitems.\r\n- Bei genau 1 St\u00FCck wird weiterhin nur der normale Itemname angezeigt.\r\n\r\nClient / Server\r\n- TPacketGCItemGroundAdd um die Item-Anzahl erweitert.\r\n- Server sendet nun GetCount() bei Bodenitems.\r\n- Client verarbeitet die Menge beim Erstellen des Bodenitems.\r\n- Server erfolgreich neu kompiliert.\r\n- Client erfolgreich neu kompiliert.\r\n- Neue Server-Binary deployed und per SHA-256 \u00FCberpr\u00FCft.\r\n\r\nLive Loot Log\r\n- Fehler beim Beenden des Spiels behoben.\r\n- Fehler beim Teleportieren/Schlie\u00DFen im Live-Loot-Log behoben.\r\n- Ung\u00FCltigen ClearDictionary()-Aufruf aus LiveLootLogWindow entfernt.\r\n- Ung\u00FCltigen ClearDictionary()-Aufruf aus LiveLootRow entfernt.\r\n- AttributeError beim Schlie\u00DFen des Clients behoben.\r\n\r\nUI / Feinschliff\r\n- Gaya-Beutel optisch an die jeweiligen Gaya-W\u00E4hrungen angepasst.\r\n- Neue Icon-Packs eingebunden.\r\n- Root-Pack aktualisiert.\r\n- Allgemeine kleinere UI- und Client-Anpassungen durchgef\u00FChrt.",
+  "PatchNotes": "PATCHNOTES \u2013 06.10.2026\r\n\r\n\u2022 Skillbuch-System auf eine echte Server-Variante umgestellt.\r\n  Normale Fertigkeitsb\u00FCcher verwenden technisch nur noch VNUM 50300.\r\n  Die jeweilige Fertigkeit wird \u00FCber Socket 0 gespeichert.\r\n\r\n\u2022 Neue Quest-Funktion pc.give_skill_book(skillVnum) eingebaut und im Game-Core registriert.\r\n\r\n\u2022 quest_functions erweitert um:\r\n  - pc.give_skill_book\r\n  - pc.give_skill_book0\r\n\r\n\u2022 Klassische Skillb\u00FCcher aus den alten 504xx/505xx-Bereichen werden bei Rewards intern auf 50300 \u002B passende Skill-ID umgewandelt.\r\n\r\n\u2022 new_quest_lv52.quest auf das neue Skillbuch-System angepasst und erfolgreich kompiliert.\r\n\r\n\u2022 book_packs.quest auf das neue Skillbuch-System angepasst und erfolgreich kompiliert.\r\n\r\n\u2022 Lykaner-Skillbuchpakete entfernt.\r\n  Lykaner bleibt auf Yasar nicht als Spielerklasse vorgesehen.\r\n\r\n\u2022 Fehler beim Quest-Compiler untersucht und behoben.\r\n  pre_qc.py -c hatte zuvor den kompletten object-Ordner gel\u00F6scht.\r\n\r\n\u2022 Quest-object aus Backup wiederhergestellt.\r\n  Ausgangsstand nach Wiederherstellung: 2952 Dateien.\r\n\r\n\u2022 Fehlende Lua-Deklaration get_map_name_by_number in quest_functions erg\u00E4nzt.\r\n\r\n\u2022 LV52-Quest danach erfolgreich kompiliert.\r\n  Die Quest-Objects werden bei Marty triggerbasiert gespeichert, z. B. unter:\r\n  object/notarget/login\r\n  object/706/kill\r\n  object/20355/chat\r\n\r\n\u2022 book_packs erfolgreich kompiliert.\r\n  Skillbuchpakete 71203\u201371218 sind vorhanden.\r\n\r\n\u2022 Neuer Quest-object-Gesamtstand: 3018 Dateien.\r\n\r\n\u2022 Sicherheitspr\u00FCfung durchgef\u00FChrt:\r\n  Seit dem 18.09.2026 wurden nur\r\n  - story/new_quest_lv52.quest\r\n  - systems/items/book_packs.quest\r\n  ge\u00E4ndert.\r\n  Beide wurden neu kompiliert.\r\n\r\n\u2022 Server sauber neu gestartet.\r\n\r\n\u2022 Alle 5 Serverprozesse laufen:\r\n  - srv1-db\r\n  - srv1-auth1\r\n  - srv1-ch1-core1\r\n  - srv1-ch1-core2\r\n  - srv1-ch99-core99\r\n\r\n\u2022 Ingame-Test erfolgreich:\r\n  Das neue Skillbuch-System funktioniert.",
   "Files": [
     {
       "Path": "metin2.cfg",
@@ -11,44 +11,44 @@
     },
     {
       "Path": "metin2client.exe",
-      "Sha256": "fc5f1d999f28b34bdc1c7db491213d227f1d7690c612e31f248310be908cf120",
+      "Sha256": "c29c78a43771861696ca872549d626989e56e1a4137412d85f13d55a78178e7e",
       "Size": 5393920,
       "Url": ""
     },
     {
       "Path": "pack/icon.eix",
-      "Sha256": "310bb2df93ffb0e000f20f95c1f770b9c239582205480bf24d0e98bfcd4b9a6b",
-      "Size": 139988,
+      "Sha256": "67180eb601145eeb81fb4e4ce4970a3ff64e855f47ee458c08e168efbafa0043",
+      "Size": 141460,
       "Url": ""
     },
     {
       "Path": "pack/icon.epk",
-      "Sha256": "df40f7b1bf347c47d5b26b21545c25cccfe817c8b0a818a53ecb01244fd21d54",
-      "Size": 17053440,
+      "Sha256": "fbe8c3b98378693698c02b478cd9ae1c4ec3ebc6d05381c0ad3a91633003dce1",
+      "Size": 17170944,
       "Url": ""
     },
     {
       "Path": "pack/locale.eix",
-      "Sha256": "719e58a47aa38c86817ad07436202e314d9f396c584a1219450fc58074c752e5",
-      "Size": 252164,
+      "Sha256": "e053dab5384cd58fc8a35a72e6c5fcafa8c40d326d6f93b46fcdb3785125fec6",
+      "Size": 241540,
       "Url": ""
     },
     {
       "Path": "pack/locale.epk",
-      "Sha256": "bb07b18ba0656e0794a1ca2ba83ed2110b40be261538b5cb8e63f01b38b333ac",
-      "Size": 157358848,
-      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.11/pack__locale.epk"
+      "Sha256": "5d03106dbabc2de5f0152928afaa170e5c3e09ac3b7a19768a8acf84003f6615",
+      "Size": 158533376,
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.12/pack__locale.epk"
     },
     {
       "Path": "pack/root.eix",
-      "Sha256": "d2935934197bfcd2c5d71fb24b7ec4681fa78b6efb0bcb7a55be654a39690773",
-      "Size": 5540,
+      "Sha256": "e99ab6d0521b4800f5609b1c51b8d7b42f968004dcddf3a2423892c9deb1f032",
+      "Size": 5724,
       "Url": ""
     },
     {
       "Path": "pack/root.epk",
-      "Sha256": "67ba277a6ad3015739c24d703adc781be66f84f73d672098eeff74807f252db8",
-      "Size": 1111296,
+      "Sha256": "058a020d65282638fe1d0a9f50af7c1da886c456bc7d0180780899f35a4044b1",
+      "Size": 1229568,
       "Url": ""
     },
     {
@@ -61,7 +61,7 @@
       "Path": "pack/yw_etc.epk",
       "Sha256": "70b68cd619b981a3cb4abd223f95aea108ebdbed988c7b8146bed7e83e9b37a7",
       "Size": 124076800,
-      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.11/pack__yw_etc.epk"
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.12/pack__yw_etc.epk"
     }
   ],
   "Deleted": []
