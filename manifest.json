@@ -1,8 +1,26 @@
 ﻿{
-  "Version": "1.0.12",
+  "Version": "1.0.13",
   "BaseVersion": "1.0.2",
-  "PatchNotes": "PATCHNOTES \u2013 06.10.2026\r\n\r\n\u2022 Skillbuch-System auf eine echte Server-Variante umgestellt.\r\n  Normale Fertigkeitsb\u00FCcher verwenden technisch nur noch VNUM 50300.\r\n  Die jeweilige Fertigkeit wird \u00FCber Socket 0 gespeichert.\r\n\r\n\u2022 Neue Quest-Funktion pc.give_skill_book(skillVnum) eingebaut und im Game-Core registriert.\r\n\r\n\u2022 quest_functions erweitert um:\r\n  - pc.give_skill_book\r\n  - pc.give_skill_book0\r\n\r\n\u2022 Klassische Skillb\u00FCcher aus den alten 504xx/505xx-Bereichen werden bei Rewards intern auf 50300 \u002B passende Skill-ID umgewandelt.\r\n\r\n\u2022 new_quest_lv52.quest auf das neue Skillbuch-System angepasst und erfolgreich kompiliert.\r\n\r\n\u2022 book_packs.quest auf das neue Skillbuch-System angepasst und erfolgreich kompiliert.\r\n\r\n\u2022 Lykaner-Skillbuchpakete entfernt.\r\n  Lykaner bleibt auf Yasar nicht als Spielerklasse vorgesehen.\r\n\r\n\u2022 Fehler beim Quest-Compiler untersucht und behoben.\r\n  pre_qc.py -c hatte zuvor den kompletten object-Ordner gel\u00F6scht.\r\n\r\n\u2022 Quest-object aus Backup wiederhergestellt.\r\n  Ausgangsstand nach Wiederherstellung: 2952 Dateien.\r\n\r\n\u2022 Fehlende Lua-Deklaration get_map_name_by_number in quest_functions erg\u00E4nzt.\r\n\r\n\u2022 LV52-Quest danach erfolgreich kompiliert.\r\n  Die Quest-Objects werden bei Marty triggerbasiert gespeichert, z. B. unter:\r\n  object/notarget/login\r\n  object/706/kill\r\n  object/20355/chat\r\n\r\n\u2022 book_packs erfolgreich kompiliert.\r\n  Skillbuchpakete 71203\u201371218 sind vorhanden.\r\n\r\n\u2022 Neuer Quest-object-Gesamtstand: 3018 Dateien.\r\n\r\n\u2022 Sicherheitspr\u00FCfung durchgef\u00FChrt:\r\n  Seit dem 18.09.2026 wurden nur\r\n  - story/new_quest_lv52.quest\r\n  - systems/items/book_packs.quest\r\n  ge\u00E4ndert.\r\n  Beide wurden neu kompiliert.\r\n\r\n\u2022 Server sauber neu gestartet.\r\n\r\n\u2022 Alle 5 Serverprozesse laufen:\r\n  - srv1-db\r\n  - srv1-auth1\r\n  - srv1-ch1-core1\r\n  - srv1-ch1-core2\r\n  - srv1-ch99-core99\r\n\r\n\u2022 Ingame-Test erfolgreich:\r\n  Das neue Skillbuch-System funktioniert.",
+  "PatchNotes": "Metin2 Yasar \u2013 Patchnotes 06.10.2026\r\n\r\nLiveLoot / Beute-Log\r\n\r\n- Persistente Loot-Historie weiter fertiggestellt und erfolgreich getestet.\r\n- Loot-Verlauf bleibt nach Relog erhalten.\r\n- Skillb\u00FCcher werden im Loot-Log mit dem richtigen Skill angezeigt.\r\n- Anzeige von Skillb\u00FCchern beim Ziehen im Inventar korrigiert.\r\n- LiveLoot-Fenster optisch fertiggestellt und stabilisiert.\r\n- Sichtbarer bronzefarbener Rahmen an allen vier Seiten hinzugef\u00FCgt.\r\n- Fenster kann normal verschoben werden.\r\n- Gr\u00F6\u00DFen\u00E4nderung \u00FCber die rechte Seite funktioniert.\r\n- Gr\u00F6\u00DFen\u00E4nderung \u00FCber die untere Seite funktioniert.\r\n- Gr\u00F6\u00DFen\u00E4nderung unten rechts funktioniert.\r\n- Mindest- und Maximalgr\u00F6\u00DFe des Fensters begrenzt.\r\n- Sichtbare Loot-Zeilen passen sich automatisch an die Fenstergr\u00F6\u00DFe an.\r\n\r\nLiveLoot Taskbar\r\n\r\n- Neuer LiveLoot-Button in der unteren Taskleiste hinzugef\u00FCgt.\r\n- Button befindet sich links neben dem Maus-/Autoattack-Bereich.\r\n- Mit einem Klick kann das LiveLoot-Fenster ausgeblendet werden.\r\n- Mit erneutem Klick wird es wieder ge\u00F6ffnet.\r\n- Loot wird auch weiter aufgezeichnet, wenn das Fenster geschlossen ist.\r\n- Neue Drops \u00F6ffnen das LiveLoot-Fenster nicht mehr automatisch.\r\n- Gespeicherte Eintr\u00E4ge bleiben beim Aus- und Einblenden erhalten.\r\n\r\nFixes / Stabilit\u00E4t\r\n\r\n- Mehrere Resize-Varianten getestet.\r\n- Instabile Resize-Methoden wieder entfernt.\r\n- Linkes und oberes Resize bewusst deaktiviert, da es mit der Fensterbewegung kollidiert hat.\r\n- Bestehendes LiveLoot-Design beibehalten.\r\n- Taskbar-Integration erfolgreich ingame getestet.\r\n\r\nF\u00FCr den n\u00E4chsten Arbeitstag geplant\r\n\r\n- Zahnrad oben rechts im LiveLoot-Fenster.\r\n- Filtereinstellungen f\u00FCr:\r\n  - normale Drops\r\n  - Metin-Drops\r\n  - Boss-Drops\r\n  - Truhen-Drops\r\n  - Event-Items\r\n  - Dungeon-Rewards\r\n  - Quest-Rewards\r\n  - System-Rewards\r\n- Ausgeblendete Kategorien sollen weiterhin gespeichert werden und nur in der Anzeige verborgen sein.\r\n- Filtereinstellungen sollen gespeichert bleiben.\r\n- Loot-Quelle verbessern:\r\n  Statt \u0022Unbekannt\u0022 soll m\u00F6glichst immer die echte Herkunft angezeigt werden.\r\n  Beispiele:\r\n  - Monster\r\n  - Metin\r\n  - Boss\r\n  - Truhe\r\n  - Event\r\n  - Dungeon\r\n  - Quest\r\n- Danach weitere serverseitige Vollabdeckung des LiveLoot-Systems.",
   "Files": [
+    {
+      "Path": "backup_liveloot_history_20261006_221054/metin2client.exe",
+      "Sha256": "c29c78a43771861696ca872549d626989e56e1a4137412d85f13d55a78178e7e",
+      "Size": 5393920,
+      "Url": ""
+    },
+    {
+      "Path": "backup_liveloot_history_20261006_221054/root.eix",
+      "Sha256": "7a252442caf8126cb54219d5c4dd992ef95b21e99ae0e3cec99e9f28031361c5",
+      "Size": 5868,
+      "Url": ""
+    },
+    {
+      "Path": "backup_liveloot_history_20261006_221054/root.epk",
+      "Sha256": "ff78179732a470ff1f4e9b131ea5b7c2fd8a0df1511440c5f92439a92c2bb0e9",
+      "Size": 1237248,
+      "Url": ""
+    },
     {
       "Path": "metin2.cfg",
       "Sha256": "fd8e5b528fab35707252c2c1c3a5c79f6390d3108d13274edef124cb0f79ff14",
@@ -11,7 +29,7 @@
     },
     {
       "Path": "metin2client.exe",
-      "Sha256": "c29c78a43771861696ca872549d626989e56e1a4137412d85f13d55a78178e7e",
+      "Sha256": "f8c2691769d080f929b4d82bf17b7e7b15bb7540859eae7c89c4ad290f322768",
       "Size": 5393920,
       "Url": ""
     },
@@ -37,16 +55,28 @@
       "Path": "pack/locale.epk",
       "Sha256": "5d03106dbabc2de5f0152928afaa170e5c3e09ac3b7a19768a8acf84003f6615",
       "Size": 158533376,
-      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.12/pack__locale.epk"
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.13/pack__locale.epk"
     },
     {
       "Path": "pack/root.eix",
+      "Sha256": "64254077d0fcc1cafe44bc10aed5fee0b7e4f7663ab5922680b3ce1ae1169977",
+      "Size": 6924,
+      "Url": ""
+    },
+    {
+      "Path": "pack/root.eix.backup_liveloot_ui_20261006_212837",
       "Sha256": "e99ab6d0521b4800f5609b1c51b8d7b42f968004dcddf3a2423892c9deb1f032",
       "Size": 5724,
       "Url": ""
     },
     {
       "Path": "pack/root.epk",
+      "Sha256": "e8c420555df0a225d70d489e5f2f8c538e4f279fb5ff068237fa88d8e5f7abc0",
+      "Size": 1443072,
+      "Url": ""
+    },
+    {
+      "Path": "pack/root.epk.backup_liveloot_ui_20261006_212837",
       "Sha256": "058a020d65282638fe1d0a9f50af7c1da886c456bc7d0180780899f35a4044b1",
       "Size": 1229568,
       "Url": ""
@@ -61,7 +91,7 @@
       "Path": "pack/yw_etc.epk",
       "Sha256": "70b68cd619b981a3cb4abd223f95aea108ebdbed988c7b8146bed7e83e9b37a7",
       "Size": 124076800,
-      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.12/pack__yw_etc.epk"
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.13/pack__yw_etc.epk"
     }
   ],
   "Deleted": []
