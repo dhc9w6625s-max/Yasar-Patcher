@@ -1,5 +1,5 @@
 ﻿{
-  "Version": "1.0.13",
+  "Version": "1.0.14",
   "BaseVersion": "1.0.2",
   "PatchNotes": "Metin2 Yasar \u2013 Patchnotes 06.10.2026\r\n\r\nLiveLoot / Beute-Log\r\n\r\n- Persistente Loot-Historie weiter fertiggestellt und erfolgreich getestet.\r\n- Loot-Verlauf bleibt nach Relog erhalten.\r\n- Skillb\u00FCcher werden im Loot-Log mit dem richtigen Skill angezeigt.\r\n- Anzeige von Skillb\u00FCchern beim Ziehen im Inventar korrigiert.\r\n- LiveLoot-Fenster optisch fertiggestellt und stabilisiert.\r\n- Sichtbarer bronzefarbener Rahmen an allen vier Seiten hinzugef\u00FCgt.\r\n- Fenster kann normal verschoben werden.\r\n- Gr\u00F6\u00DFen\u00E4nderung \u00FCber die rechte Seite funktioniert.\r\n- Gr\u00F6\u00DFen\u00E4nderung \u00FCber die untere Seite funktioniert.\r\n- Gr\u00F6\u00DFen\u00E4nderung unten rechts funktioniert.\r\n- Mindest- und Maximalgr\u00F6\u00DFe des Fensters begrenzt.\r\n- Sichtbare Loot-Zeilen passen sich automatisch an die Fenstergr\u00F6\u00DFe an.\r\n\r\nLiveLoot Taskbar\r\n\r\n- Neuer LiveLoot-Button in der unteren Taskleiste hinzugef\u00FCgt.\r\n- Button befindet sich links neben dem Maus-/Autoattack-Bereich.\r\n- Mit einem Klick kann das LiveLoot-Fenster ausgeblendet werden.\r\n- Mit erneutem Klick wird es wieder ge\u00F6ffnet.\r\n- Loot wird auch weiter aufgezeichnet, wenn das Fenster geschlossen ist.\r\n- Neue Drops \u00F6ffnen das LiveLoot-Fenster nicht mehr automatisch.\r\n- Gespeicherte Eintr\u00E4ge bleiben beim Aus- und Einblenden erhalten.\r\n\r\nFixes / Stabilit\u00E4t\r\n\r\n- Mehrere Resize-Varianten getestet.\r\n- Instabile Resize-Methoden wieder entfernt.\r\n- Linkes und oberes Resize bewusst deaktiviert, da es mit der Fensterbewegung kollidiert hat.\r\n- Bestehendes LiveLoot-Design beibehalten.\r\n- Taskbar-Integration erfolgreich ingame getestet.\r\n\r\nF\u00FCr den n\u00E4chsten Arbeitstag geplant\r\n\r\n- Zahnrad oben rechts im LiveLoot-Fenster.\r\n- Filtereinstellungen f\u00FCr:\r\n  - normale Drops\r\n  - Metin-Drops\r\n  - Boss-Drops\r\n  - Truhen-Drops\r\n  - Event-Items\r\n  - Dungeon-Rewards\r\n  - Quest-Rewards\r\n  - System-Rewards\r\n- Ausgeblendete Kategorien sollen weiterhin gespeichert werden und nur in der Anzeige verborgen sein.\r\n- Filtereinstellungen sollen gespeichert bleiben.\r\n- Loot-Quelle verbessern:\r\n  Statt \u0022Unbekannt\u0022 soll m\u00F6glichst immer die echte Herkunft angezeigt werden.\r\n  Beispiele:\r\n  - Monster\r\n  - Metin\r\n  - Boss\r\n  - Truhe\r\n  - Event\r\n  - Dungeon\r\n  - Quest\r\n- Danach weitere serverseitige Vollabdeckung des LiveLoot-Systems.",
   "Files": [
@@ -55,30 +55,18 @@
       "Path": "pack/locale.epk",
       "Sha256": "5d03106dbabc2de5f0152928afaa170e5c3e09ac3b7a19768a8acf84003f6615",
       "Size": 158533376,
-      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.13/pack__locale.epk"
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.14/pack__locale.epk"
     },
     {
       "Path": "pack/root.eix",
-      "Sha256": "64254077d0fcc1cafe44bc10aed5fee0b7e4f7663ab5922680b3ce1ae1169977",
-      "Size": 6924,
-      "Url": ""
-    },
-    {
-      "Path": "pack/root.eix.backup_liveloot_ui_20261006_212837",
-      "Sha256": "e99ab6d0521b4800f5609b1c51b8d7b42f968004dcddf3a2423892c9deb1f032",
-      "Size": 5724,
+      "Sha256": "f440b8cd9263f40b568c58f52eda9a26dbad74bdf06a98a9de2e68218693f088",
+      "Size": 5740,
       "Url": ""
     },
     {
       "Path": "pack/root.epk",
-      "Sha256": "e8c420555df0a225d70d489e5f2f8c538e4f279fb5ff068237fa88d8e5f7abc0",
-      "Size": 1443072,
-      "Url": ""
-    },
-    {
-      "Path": "pack/root.epk.backup_liveloot_ui_20261006_212837",
-      "Sha256": "058a020d65282638fe1d0a9f50af7c1da886c456bc7d0180780899f35a4044b1",
-      "Size": 1229568,
+      "Sha256": "28eb5d026a41c29a8bd8a34449ee891def69c46f5d7a7741f2cd4ee872fcaaf7",
+      "Size": 1233152,
       "Url": ""
     },
     {
@@ -91,8 +79,11 @@
       "Path": "pack/yw_etc.epk",
       "Sha256": "70b68cd619b981a3cb4abd223f95aea108ebdbed988c7b8146bed7e83e9b37a7",
       "Size": 124076800,
-      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.13/pack__yw_etc.epk"
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.14/pack__yw_etc.epk"
     }
   ],
-  "Deleted": []
+  "Deleted": [
+    "pack/root.eix.backup_liveloot_ui_20261006_212837",
+    "pack/root.epk.backup_liveloot_ui_20261006_212837"
+  ]
 }
