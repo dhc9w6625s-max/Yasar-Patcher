@@ -1,26 +1,8 @@
 ﻿{
-  "Version": "1.0.15",
+  "Version": "1.0.16",
   "BaseVersion": "1.0.2",
-  "PatchNotes": "Patchnotes \u2013 08.10.2026\r\n\r\n\u2022 LiveLoot-System\r\n  - Zeitstempel f\u00FCr Loot-Eintr\u00E4ge korrigiert.\r\n  - Loot-Eintr\u00E4ge zeigen jetzt die tats\u00E4chliche Uhrzeit korrekt an.\r\n  - Server-Zeitsynchronisierung eingerichtet, damit neue Loot-Eintr\u00E4ge dauerhaft mit korrekter Zeit gespeichert werden.\r\n\r\n\u2022 Minimap / Performance-Anzeige\r\n  - Live-Uhr mit Sekundenanzeige hinzugef\u00FCgt.\r\n  - Uhrzeit nutzt jetzt die Server-/Globalzeit und l\u00E4uft zuverl\u00E4ssig weiter.\r\n  - Aktuelle FPS-Anzeige hinzugef\u00FCgt.\r\n  - Eigene Ping-Anzeige unterhalb der FPS-Anzeige hinzugef\u00FCgt.\r\n\r\n\u2022 Neues Live-Ping-System\r\n  - Echter Client-Server-Roundtrip-Ping implementiert.\r\n  - Ping wird ungef\u00E4hr jede Sekunde neu gemessen.\r\n  - Angezeigter Wert entspricht jetzt der tats\u00E4chlichen Verbindung zwischen Spieler und Server.\r\n  - Neues Client\u2192Server-Paket CG 214 f\u00FCr Live-Ping integriert.\r\n  - GC 220 f\u00FCr die Ping-Antwort verwendet.\r\n  - Bestehender 60-Sekunden-Keepalive bleibt separat bestehen und wird nicht ver\u00E4ndert.\r\n  - Ping-System ingame erfolgreich getestet.\r\n\r\n\u2022 Client\r\n  - Neue Ping-Funktionen in den Client-Source integriert.\r\n  - net.GetPing() und net.SendLivePing() angebunden.\r\n  - Minimap-UI entsprechend erweitert.\r\n  - Client erfolgreich kompiliert: 0 Fehler.\r\n  - root-Pack neu erstellt und Testclient aktualisiert.\r\n\r\n\u2022 Server\r\n  - Live-Ping-Handler und Paketregistrierung eingebaut.\r\n  - Server erfolgreich kompiliert.\r\n  - Neues Game-Binary deployed.\r\n  - Auth, CH1 Core1/Core2, CH99 und DB erfolgreich neu gestartet.\r\n  - Alle Serverports erfolgreich gepr\u00FCft.\r\n\r\n\u2022 Test\r\n  - Uhr: erfolgreich getestet.\r\n  - FPS: erfolgreich getestet.\r\n  - Live-Ping: erfolgreich getestet.\r\n  - Client und Server laufen synchron auf dem neuen Stand.",
+  "PatchNotes": "Patch 1.0.15 \u2013 Rarity Visual Update\r\n\r\n\u2022 Das Rarity-System wurde optisch deutlich erweitert.\r\n\u2022 Seltene Gegenst\u00E4nde besitzen nun einen permanenten farbigen Effekt in den relevanten Item-Slots.\r\n\u2022 Selten = Blau\r\n\u2022 Legend\u00E4r = Gr\u00FCn\r\n\u2022 Episch = Violett\r\n\r\n\u2022 Rarity-Effekte werden nun unter anderem im Inventar, Equipment, Kost\u00FCmfenster, G\u00FCrtelinventar, Handel, Lager, Shop und Offline-Shop korrekt dargestellt.\r\n\u2022 Der normale \u201ENeues Item\u201C-Effekt wird bei Rarity-Gegenst\u00E4nden nicht mehr zus\u00E4tzlich angezeigt.\r\n\r\n\u2022 Auf dem Boden liegende Rarity-Gegenst\u00E4nde zeigen ihren Itemnamen jetzt ebenfalls in ihrer jeweiligen Rarity-Farbe.\r\n\r\n\u2022 Das LiveLoot-System wurde um Rarity-Unterst\u00FCtzung erweitert.\r\n\u2022 Rarity-Gegenst\u00E4nde werden im LiveLoot mit der passenden Namensfarbe angezeigt.\r\n\u2022 Die Rarity wird dauerhaft im Loot-Verlauf gespeichert.\r\n\u2022 Nach Relog oder Client-Neustart bleiben die korrekten Rarity-Farben im Verlauf erhalten.\r\n\r\n\u2022 Generische Item-Vorschauen und m\u00F6gliche Drops erhalten weiterhin keine k\u00FCnstliche Rarity-Anzeige.\r\n\u2022 Die Darstellung basiert ausschlie\u00DFlich auf der tats\u00E4chlichen Rarity der jeweiligen Item-Instanz.\r\n\r\n\u2022 Verschiedene interne Client-/Server-Anpassungen und Stabilit\u00E4tsverbesserungen f\u00FCr das Rarity-System.",
   "Files": [
-    {
-      "Path": "backup_liveloot_history_20261006_221054/metin2client.exe",
-      "Sha256": "c29c78a43771861696ca872549d626989e56e1a4137412d85f13d55a78178e7e",
-      "Size": 5393920,
-      "Url": ""
-    },
-    {
-      "Path": "backup_liveloot_history_20261006_221054/root.eix",
-      "Sha256": "7a252442caf8126cb54219d5c4dd992ef95b21e99ae0e3cec99e9f28031361c5",
-      "Size": 5868,
-      "Url": ""
-    },
-    {
-      "Path": "backup_liveloot_history_20261006_221054/root.epk",
-      "Sha256": "ff78179732a470ff1f4e9b131ea5b7c2fd8a0df1511440c5f92439a92c2bb0e9",
-      "Size": 1237248,
-      "Url": ""
-    },
     {
       "Path": "metin2.cfg",
       "Sha256": "fd8e5b528fab35707252c2c1c3a5c79f6390d3108d13274edef124cb0f79ff14",
@@ -29,8 +11,8 @@
     },
     {
       "Path": "metin2client.exe",
-      "Sha256": "a714086dce9f87a4526235ca53422514827a2872a3b58ded6ab476fc4894c709",
-      "Size": 5394944,
+      "Sha256": "9a5a9a7e005e39bb612bfe6b56b47557ef488bc62d636b1017dd9c51faeca510",
+      "Size": 5395968,
       "Url": ""
     },
     {
@@ -47,26 +29,26 @@
     },
     {
       "Path": "pack/locale.eix",
-      "Sha256": "49351ce45f333b409606f9b7a6a6334cd05885bfddc8b7268257d6103c1eefc7",
-      "Size": 250396,
+      "Sha256": "f7964b4c38accb02e6f120ede378b6968af4bf7c23110d400f25ece1e131e4d3",
+      "Size": 247892,
       "Url": ""
     },
     {
       "Path": "pack/locale.epk",
-      "Sha256": "a1c34c1260f3f38e638004e65539aae76863235ca6f389060a56f5f39cbc95f4",
+      "Sha256": "c789189f30f36c007f7964ccff9d5465cfdaead3c6e7a72dc55d4853232b699e",
       "Size": 158533376,
-      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.15/pack__locale.epk"
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.16/pack__locale.epk"
     },
     {
       "Path": "pack/root.eix",
-      "Sha256": "3a3a6018fe3eb665fe7e6a7d7b995b05f44cced837cfb4051aa7b0734943b0c5",
+      "Sha256": "7746314f2293d65ca13a51409aea22c0685f31e0f06cffc89a238a56c3aa732a",
       "Size": 5748,
       "Url": ""
     },
     {
       "Path": "pack/root.epk",
-      "Sha256": "00a3cc67834dcc1c8cc3f1abaab79963dda437db99ac43b77f330cd6d671a4bc",
-      "Size": 1233664,
+      "Sha256": "b88715efc0e2d4bb08465ae4f844f12220607d09ead788227b177313917cac7b",
+      "Size": 1235456,
       "Url": ""
     },
     {
@@ -91,10 +73,31 @@
       "Path": "pack/yw_etc.epk",
       "Sha256": "70b68cd619b981a3cb4abd223f95aea108ebdbed988c7b8146bed7e83e9b37a7",
       "Size": 124076800,
-      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.15/pack__yw_etc.epk"
+      "Url": "https://github.com/dhc9w6625s-max/Yasar-Patcher/releases/download/patch-1.0.16/pack__yw_etc.epk"
+    },
+    {
+      "Path": "shop/notifications_ROOT.json",
+      "Sha256": "01ce19ae9edcf8805196105cdc493fb6ad9d16c9f361b2788d04dfaaf21da34d",
+      "Size": 69,
+      "Url": ""
+    },
+    {
+      "Path": "shop/price_history_hash.json",
+      "Sha256": "0a997d7bc1556281a11d97c8375cb89c05ab9b5b7599ef0068659fbef103bb99",
+      "Size": 222,
+      "Url": ""
+    },
+    {
+      "Path": "shop/price_history_vnum.json",
+      "Sha256": "433d8e69d7dc0e10bc065fc6ff855451766b95c23b0c8ac01e35cd691908c82b",
+      "Size": 204,
+      "Url": ""
     }
   ],
   "Deleted": [
+    "backup_liveloot_history_20261006_221054/metin2client.exe",
+    "backup_liveloot_history_20261006_221054/root.eix",
+    "backup_liveloot_history_20261006_221054/root.epk",
     "pack/root.eix.backup_liveloot_ui_20261006_212837",
     "pack/root.epk.backup_liveloot_ui_20261006_212837"
   ]
